@@ -1,0 +1,194 @@
+/* Extras for the student's My Profile page.
+   The top bar and page heading come from Dashboard.css. */
+
+.dash .dash__body.prf-body {
+  max-width: 52rem;
+}
+
+.dash .prf-email {
+  display: inline-block;
+  margin-top: 0.6rem;
+  padding: 0.25rem 0.8rem;
+  font-size: 0.88rem;
+  color: var(--night-glow);
+  background: #ece6fb;
+  border-radius: 999px;
+}
+
+.dash .prf-card {
+  margin-bottom: 1.25rem;
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 18px 40px -32px rgba(58, 26, 122, 0.5);
+}
+
+.dash .prf-card h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.1;
+  color: var(--night-mid);
+}
+
+.dash .prf-hint {
+  margin: 0.3rem 0 1.25rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.dash .prf-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 1.25rem;
+}
+
+.dash .fld {
+  min-width: 0;
+}
+
+.dash .fld--full {
+  grid-column: 1 / -1;
+}
+
+.dash .fld label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.dash .fld input,
+.dash .fld select,
+.dash .fld textarea {
+  width: 100%;
+  padding: 0 0.9rem;
+  font: inherit;
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid #ddd6ee;
+  border-radius: 10px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.dash .fld input,
+.dash .fld select {
+  height: 2.9rem;
+}
+
+.dash .fld textarea {
+  min-height: 6.5rem;
+  padding: 0.75rem 0.9rem;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.dash .fld input::placeholder,
+.dash .fld textarea::placeholder {
+  color: #a79fbf;
+}
+
+.dash .fld input:hover,
+.dash .fld select:hover,
+.dash .fld textarea:hover {
+  border-color: #c4b9e0;
+}
+
+.dash .fld input:focus,
+.dash .fld select:focus,
+.dash .fld textarea:focus {
+  outline: none;
+  border-color: var(--violet);
+  box-shadow: 0 0 0 4px rgba(123, 92, 240, 0.2);
+}
+
+.dash .fld select {
+  appearance: none;
+  padding-right: 2.4rem;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b6485' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+}
+
+.dash .prf-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dash .prf-msg {
+  flex: 1 1 14rem;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  border-radius: 10px;
+}
+
+.dash .prf-msg--success {
+  color: #1f7a57;
+  background: #e6f4ee;
+  border: 1px solid #bfe0d0;
+}
+
+.dash .prf-msg--error {
+  color: var(--error);
+  background: #fbeceb;
+  border: 1px solid #f0c9c6;
+}
+
+.dash .prf-save {
+  height: 2.9rem;
+  margin-left: auto;
+  padding: 0 2.25rem;
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(100deg, #5a3ad8 0%, var(--violet) 45%, var(--orchid) 100%);
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 10px 22px -12px rgba(123, 92, 240, 0.8);
+  transition: filter 0.15s ease, transform 0.1s ease;
+}
+
+.dash .prf-save:hover {
+  filter: brightness(1.08);
+}
+
+.dash .prf-save:active {
+  transform: translateY(1px);
+}
+
+.dash .prf-save:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .dash .prf-card {
+    padding: 1.25rem;
+  }
+
+  .dash .prf-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dash .prf-save {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dash .fld input,
+  .dash .fld select,
+  .dash .fld textarea,
+  .dash .prf-save {
+    transition: none;
+  }
+}

@@ -1,0 +1,85 @@
+/* Extras for the Manage Users page.
+   The rest of the styling (top bar, table, search) comes from Dashboard.css. */
+
+.dash .dash__msg {
+  margin: 0 0 1rem;
+  padding: 0.8rem 1rem;
+  font-size: 0.95rem;
+  color: var(--night-glow);
+  background: #ece6fb;
+  border: 1px solid #d9cff7;
+  border-left: 4px solid var(--violet);
+  border-radius: 10px;
+}
+
+.dash .dash__you {
+  padding: 0.1rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted);
+  background: var(--lavender);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+
+.dash .role-select {
+  appearance: none;
+  height: 2.4rem;
+  min-width: 8.5rem;
+  padding: 0 2.2rem 0 1rem;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid;
+  border-radius: 999px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b6485' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  transition: box-shadow 0.15s ease;
+}
+
+.dash .role-select:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(123, 92, 240, 0.2);
+}
+
+.dash .role-select:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.dash .role-select:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.dash .role--user {
+  color: #5b5478;
+  background-color: #f4f1fb;
+  border-color: #ddd6ee;
+}
+
+.dash .role--trainer {
+  color: #0b6a8c;
+  background-color: #dff3fb;
+  border-color: #b9e1f2;
+}
+
+.dash .role--manager {
+  color: #4a2fc2;
+  background-color: #e9e3fd;
+  border-color: #d3c8f8;
+}
+
+.dash .role--admin {
+  color: #9a2bb2;
+  background-color: #f6e1fa;
+  border-color: #e8c0f0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dash .role-select {
+    transition: none;
+  }
+}
